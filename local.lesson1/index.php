@@ -31,6 +31,7 @@
         <p>faster</p>
         <p>better</p>
         <p>higher</p>
+        <p>common</p>
     </section>
     <div class='columns centered'>
         <aside class="columns__sidebar columns__sidebar--left">
