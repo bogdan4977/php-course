@@ -1,0 +1,110 @@
+/*** CUSTOM STYLES***/
+body {
+    font-family: "Michroma", Helvetica, Arial sans-serif;
+    font-size: 10px;
+    line-height: 1.2;
+    word-spacing: 2px;
+}
+p,
+ul,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+.main-title{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 0;
+    font-weight: bold;
+    color: #aa8871;
+}
+ul {
+    list-style: none;
+}
+/*lesson 1*/
+html, body{
+    height: 100%;
+}
+.page-wrapper{
+    overflow: auto;
+    height: 100%;
+    padding-top: 2em;
+}
+.full-width{
+    width: 100%;
+}
+.centered{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.content,
+.navigation{
+    width:100%;
+    margin-bottom: 15px;
+}
+.content{
+    order: 1;
+}
+.content-text{
+    width:100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #4767aa;
+    text-align: center;
+    box-sizing: border-box;
+}
+.menu{
+    width: 100%;
+}
+.menu__item{
+    display: inline-block;
+}
+.menu__item a{
+    display: block;
+    text-transform: uppercase;
+    padding: 5px;
+}
+/*big banner*/
+.big-banner{
+    text-align: center;
+    min-height: 20vh;
+    background: #5aa1aa;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.big-banner__text{
+    font-size: 1.1em;
+}
+.columns{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em;
+}
+.columns__content{
+    width:calc(100% - 320px);
+    box-sizing: border-box;
+}
+.columns__sidebar{
+    width:300px;
+    border: 1px solid #4767aa;
+    box-sizing: border-box;
+}
+.columns__sidebar--left{
+    order: 0;
+}
+.columns__sidebar--right{
+    order: 2;
+}
+.side-banner{
+    min-height: 150px;
+    color: #fff;
+    background-color: rgba(255, 99, 18, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*lesson 1*/
