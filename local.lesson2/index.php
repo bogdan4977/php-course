@@ -15,7 +15,8 @@
 </head>
 <body>
 <div class='page-wrapper'>
-    <h1 class="main-title">Lesson 2</h1>
+    <h1 class="main-title">Lesson 2 tasks</h1>
+    <?php /*
     <nav class='navigation centered'>
         <?php
         echo "<ul class='menu'>";
@@ -46,15 +47,20 @@
             <p class='content-text'><?php echo 'PHP\'s testting'; ?></p>
         </section>
     </div>
-    <section class="centered">
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolor facere iusto nobis! Adipisci assumenda eligendi, explicabo labore molestiae voluptatem.</h3>
+    */?>
+    <!-- Tern -->
+    <section class="content-block centered">
         <?php
             $mark = 5;
             $markLabel = "Your mark is ";
         ?>
-        <h2>
-            <?php echo $mark > 3 ? $markLabel . "<em>lower than common</em>" : $markLabel . "<em> lower than common</em>"; ?>
-        </h2>
+        <h2 class="content-block__title" title="Ternar operation test">Ternar</h2>
+        <p class="content-block__text">
+            <?php echo $mark > 3 ? $markLabel . "<em>higher than common</em>" : $markLabel . "<em> lower than common</em>"; ?>
+        </p>
+    </section>
+    <section class="content-block centered">
+        <p class="content-block__text"></p>
     </section>
 </div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

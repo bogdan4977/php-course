@@ -17,7 +17,7 @@ h2 {
     font-size: 2em;
     margin: 1em 0;
     font-weight: bold;
-    color: #aa8871;
+    color: #aa4740;
 }
 ul {
     list-style: none;
@@ -107,4 +107,28 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-/*lesson 1*/
+em, strong, i{
+    color: #ff9567;
+    
+}
+.content-block{
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    margin-top: 15px;
+}
+.content-block__text{
+    color: #000;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.content-block__title{
+    font-size: 2em;
+    color: #aa4740;
+}
+.content-block__title:before{
+    content: '<';
+}
+.content-block__title:after{
+    content: '/>';
+}
+/*lesson 2*/
