@@ -189,6 +189,40 @@
             <em><?php echo ($hour . ':' . $minutes . ':' . $seconds);?></em>
         </p>
     </section>
+    <h2 class="main-title" title="Concatination short form">#6 Concatination short form</h2>
+    <section class="content-block centered">
+        <p class="content-block__text">Initial code :
+            <?php
+            //initial
+            $text = 'Я';
+            $text = $text .' хочу' ;
+            $text = $text .' знать' ;
+            $text = $text .' PHP!' ;
+            echo "<em>" . $text . "</em>";
+            ?>
+        </p>
+        <p class="content-block__text">Rewrited code :
+            <?php
+            //rewrited
+            $text = 'Я';
+            $text .= ' хочу' ;
+            $text .= ' знать' ;
+            $text .= ' PHP!' ;
+            echo "<em>" . $text . "</em>";
+            ?>
+        </p>
+    </section>
+    <h2 class="main-title" title="$foo $bar">#7 $foo $bar</h2>
+    <section class="content-block centered">
+        <i class="task-text">Задана переменная $foo = 'bar'; Создать переменную bar, в которой будет храниться число 10. Вывести число 10, используя только переменную $foo
+        </i>
+        <?php
+        $foo = 'bar';
+        $bar = 10;
+        ?>
+        <p class="content-block__text">Our number: <?php echo $$foo; ?></p>
+    </section>
+
 </div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='js/main.js'></script>

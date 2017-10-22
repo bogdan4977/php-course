@@ -17,7 +17,7 @@ h2 {
     font-size: 2em;
     margin: 1em 0;
     font-weight: bold;
-    color: #aa4740;
+    color: #4f4f4f;
 }
 ul {
     list-style: none;
@@ -124,12 +124,16 @@ em, strong, i{
 }
 .content-block__title{
     font-size: 2em;
-    color: #aa4740;
+    color: #3339aa;
 }
 .content-block__title:before{
     content: '<';
 }
 .content-block__title:after{
     content: '/>';
+}
+i.task-text{
+    font-size: 1.2em;
+    color: #828282;
 }
 /*lesson 2*/
