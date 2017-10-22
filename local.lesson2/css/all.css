@@ -28,8 +28,8 @@ html, body{
 }
 .page-wrapper{
     overflow: auto;
-    height: 100%;
-    padding-top: 2em;
+    min-height: 100%;
+    padding: 2em;
 }
 .full-width{
     width: 100%;
@@ -108,7 +108,8 @@ html, body{
     align-items: center;
 }
 em, strong, i{
-    color: #ff9567;
+    color: #7c0001;
+    font-weight: bold;
     
 }
 .content-block{
