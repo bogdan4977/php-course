@@ -136,4 +136,22 @@ i.task-text{
     font-size: 1.2em;
     color: #828282;
 }
+code{
+    display: inline-block;
+    position: relative;
+    font-size: 1.2em;
+    color: #828282;
+}
+code:before{
+    display: inline-block;
+    content: "<?php";
+    color: #ff763d;
+    margin-right: 0.5em;
+}
+code:after{
+    display: inline-block;
+    content: "?>";
+    color: #ff763d;
+    margin-left: 0.5em;
+}
 /*lesson 2*/
