@@ -335,6 +335,7 @@
         <p class="content-block__text">Changed number = <em><?php echo (int)$numToString; ?></em></p>
         <p class="content-block__text">Changed direction = <em><?php echo (int)($numToString[2] . $numToString[1] . $numToString[0]); ?></em></p>
     </section>
+
 </div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='js/main.js'></script>
