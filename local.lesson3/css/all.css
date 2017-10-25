@@ -200,7 +200,7 @@ code:after{
 .form__element input:focus,
 .form__element textarea:focus,
 .form__element select:focus{
-    box-shadow: 0 0 3px 1px #916baa;
+    box-shadow: 0 0 5px 1px #9b4caa;
 }
 .form__element select{
     padding: 5px;
