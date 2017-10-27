@@ -52,13 +52,40 @@
         </section>
     </div>
     */ ?>
+
+    <?php
+    if (isset($_GET['formHide'])) {
+        $message = "success";
+        $formData = $_GET;
+        $cardNumber = $_GET["cardnumber"];
+        $CV2 = $_GET["CV2"];
+    } else {
+        $message = "Enter data";
+        $cardNumber = "";
+    }
+    /**Задача!!! Собрать все переменные полей(значения полей),
+     **обьеденить через конкотинацию, вывести на фронт. Собрать несколько разных форм
+     */
+    ?>
     <h2 class="main-title" title="Variables">Forms</h2>
+    <section class="content-block centered ">
+        <strong><?php echo $message; ?></strong>
+        <p><code><?php print_r($formData); ?></code></p>
+    </section>
+    <section class="content-block centered ">
+        <strong><a href="/">Back</a></strong>
+    </section>
     <section class="content-block centered form-box">
-        <form action="/" method="get" class="form">
+        <form name="form1" action="index.php" method="get" class="form" enctype="multipart/form-data">
             <div class="form__element">
                 <p class="form-legend">Input text</p>
-                <label for="inputId">Enter Name</label>
-                <input id="inputId" name="user name" placeholder="type here" type="text"/>
+                <label for="cardNumber">Card Number</label>
+                <input id="cardNumber" name="cardnumber" placeholder="Enter number" type="text" value="<?php echo $cardNumber; ?>"/>
+            </div>
+            <div class="form__element">
+                <p class="form-legend">Input text</p>
+                <label for="cardCV2">Card CV2</label>
+                <input id="cardCV2" name="CV2" placeholder="Enter CV2" type="text" value="<?php echo $CV2; ?>"/>
             </div>
             <div class="form__element form__element--radio form__element--column">
                 <p class="form-legend">Radio buuttons</p>
@@ -112,8 +139,12 @@
                 <p class="form-legend">Text area example</p>
                 <textarea name="text" id="" cols="30" rows="10" placeholder="Type text here"></textarea>
             </div>
+            <input type="hidden" name="formHide" value="1"/>
+            <input type="submit" value="Send form"/>
+            <input type="reset" value="reset"/>
         </form>
     </section>
+
 </div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='js/main.js'></script>
