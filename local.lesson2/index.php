@@ -336,6 +336,42 @@
         <p class="content-block__text">Changed direction = <em><?php echo (int)($numToString[2] . $numToString[1] . $numToString[0]); ?></em></p>
     </section>
 
+        <?php
+        echo "<form method=post action=index.php>";
+        echo "<input type=text name=x>";
+        echo "</br>";
+        echo "<input type=text name=y>";
+        echo "</br>";
+        echo "<input type=radio name=test value=plus>+";
+        echo "<input type=radio name=test value=minus>-";
+        echo "<input type=radio name=test value=umnojit>*";
+        echo "<input type=radio name=test value=delit>/";
+        echo "</br>";
+        echo "<input type=submit name=sabmit value=Cчитать>";
+        echo "</form>";
+        if (isset($_REQUEST['x'])&&
+            (isset($_REQUEST['y'])&&
+                (isset($_REQUEST['test']))))
+        {switch ($_REQUEST['test'])
+        {case "plus":
+                echo $_REQUEST['x']+$_REQUEST['y'];
+                break;
+            case "minus":
+                echo $_REQUEST['x']-$_REQUEST['y'];
+                break;
+            case "umnojit":
+                echo $_REQUEST['x']*$_REQUEST['y'];
+                break;
+            case "delit":
+                echo $_REQUEST['x']/$_REQUEST['y'];
+                break;
+            default:
+                echo "error";
+        }
+        }
+        ?>
+
+
 </div>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='js/main.js'></script>
