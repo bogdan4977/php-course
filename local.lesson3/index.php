@@ -54,26 +54,39 @@
     */ ?>
 
     <?php
+    /*form logic*/
     if (isset($_GET['formHide'])) {
         $message = "success";
         $formData = $_GET;
+
+        /*field values*/
         $cardNumber = $_GET["cardnumber"];
         $CV2 = $_GET["CV2"];
+        $mud = $_GET["mud"];
+        $language = $_GET["language"];
+        $review = $_GET["review"];
+
+        /*concat result*/
+        $concat_result = (string)($cardNumber . " " . $CV2 . " " . $mud . " " . $language . " " . $review);
     } else {
         $message = "Enter data";
         $cardNumber = "";
+        $CV2 = "";
+        $mud = "";
+        $language = "";
+        $review = "";
     }
     /**Задача!!! Собрать все переменные полей(значения полей),
-     **обьеденить через конкотинацию, вывести на фронт. Собрать несколько разных форм
+     **обьеденить через конкaтинацию, вывести на фронт. Собрать несколько разных форм
      */
     ?>
     <h2 class="main-title" title="Variables">Forms</h2>
     <section class="content-block centered ">
         <strong><?php echo $message; ?></strong>
-        <p><code><?php print_r($formData); ?></code></p>
+        <p><code><b>Form results:</b> <?php print_r($formData); ?></code></p>
     </section>
     <section class="content-block centered ">
-        <strong><a href="/">Back</a></strong>
+        <strong><a href="/">Reset</a></strong>
     </section>
     <section class="content-block centered form-box">
         <form name="form1" action="index.php" method="get" class="form" enctype="multipart/form-data">
@@ -88,20 +101,21 @@
                 <input id="cardCV2" name="CV2" placeholder="Enter CV2" type="text" value="<?php echo $CV2; ?>"/>
             </div>
             <div class="form__element form__element--radio form__element--column">
-                <p class="form-legend">Radio buuttons</p>
+                <p class="form-legend">Choose your mud</p>
                 <label>
-                    <input id="" name="r-name" value="1" type="radio" checked/>
-                    <i>value 1</i>
+                    <input id="" name="mud" value="good" type="radio" checked/>
+                    <i>good</i>
                 </label>
                 <label>
-                    <input id="" name="r-name" value="2" type="radio"/>
-                    <i>value 2</i>
+                    <input id="" name="mud" value="lower than middle" type="radio"/>
+                    <i>lower than middle</i>
                 </label>
                 <label>
-                    <input id="" name="r-name" value="3" type="radio"/>
-                    <i>value 3</i>
+                    <input id="" name="mud" value="bad" type="radio"/>
+                    <i>bad</i>
                 </label>
             </div>
+            <?php /*
             <div class="form__element form__element--checkbox form__element--column">
                 <p class="form-legend">Checkboxes buttons</p>
                 <label>
@@ -117,14 +131,18 @@
                     <i>value 6</i>
                 </label>
             </div>
+            */ ?>
+
             <div class="form__element">
-                <p class="form-legend">Select</p>
-                <select name="select" id="">
-                    <option value="opt-1">option-1</option>
-                    <option value="opt-2">option-2</option>
-                    <option value="opt-3">option long-3</option>
+                <p class="form-legend">Code language</p>
+                <label for="select-test">Choose an option!</label>
+                <select name="language" id="select-test">
+                    <option value="php">PHP</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
                 </select>
             </div>
+            <?php /*
             <div class="form__element">
                 <p class="form-legend">Multi select</p>
                 <select name="select" id="" multiple="multiple">
@@ -135,14 +153,21 @@
                     <option value="opt-5">option really long-5</option>
                 </select>
             </div>
+            */ ?>
             <div class="form__element form__element--checkbox form__element--column">
-                <p class="form-legend">Text area example</p>
-                <textarea name="text" id="" cols="30" rows="10" placeholder="Type text here"></textarea>
+                <p class="form-legend">Fill with your thoughts</p>
+                <textarea name="review" id="" cols="30" rows="10" placeholder="Type here"></textarea>
             </div>
+            <div class="form__lement form__lement--actions">
+                <input type="submit" value="Send form"/>
+                <input type="reset" value="reset"/>
+            </div>
+            <?php /*hidden fields*/ ?>
             <input type="hidden" name="formHide" value="1"/>
-            <input type="submit" value="Send form"/>
-            <input type="reset" value="reset"/>
         </form>
+    </section>
+    <section class="content-block centered">
+        <p class="content-block__text"><i>Your result is: </i><span><?php echo $concat_result; ?></span></p>
     </section>
 
 </div>
