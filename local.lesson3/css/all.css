@@ -12,6 +12,10 @@ h2 {
     margin: 0;
     padding: 0;
 }
+p{
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
 .main-title{
     text-align: center;
     font-size: 2em;

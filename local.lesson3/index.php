@@ -84,6 +84,10 @@
     <section class="content-block centered ">
         <strong><?php echo $message; ?></strong>
         <p><code><b>Form results:</b> <?php print_r($formData); ?></code></p>
+        <i>Test env variables</i>
+        <p><b>Server name:</b> <?php echo getenv("SERVER_NAME"); ?></p>
+        <p><b>User agent:</b> <?php echo getenv("HTTP_USER_AGENT"); ?></p>
+        <p><b>Remote address:</b> <?php echo getenv("REMOTE_ADDR"); ?></p>
     </section>
     <section class="content-block centered ">
         <strong><a href="/">Reset</a></strong>
