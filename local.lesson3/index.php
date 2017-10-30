@@ -66,6 +66,11 @@
         $language = $_GET["language"];
         $review = $_GET["review"];
 
+        $color = $_GET["color"];
+
+        $multiple = $_GET["day"];
+
+
         /*concat result*/
         $concat_result = (string)($cardNumber . " " . $CV2 . " " . $mud . " " . $language . " " . $review);
     } else {
@@ -91,6 +96,14 @@
     </section>
     <section class="content-block centered ">
         <strong><a href="/">Reset</a></strong>
+    </section>
+    <section class="content-block centered ">
+        <h2>Variables Answer</h2>
+        <p>Radibuttons: <em><?php echo  $mud; ?></em></p>
+        <p>Text area: <em><?php echo  $review; ?></em></p>
+        <p>Color: <em><?php print_r($color); ?></em></p>
+        <p>Color: <em><?php print_r($language); ?></em></p>
+        <p>Multiple: <em><?php print_r($multiple); ?></em></p>
     </section>
     <section class="content-block centered form-box">
         <form name="form1" action="index.php" method="get" class="form" enctype="multipart/form-data">
@@ -119,23 +132,23 @@
                     <i>bad</i>
                 </label>
             </div>
-            <?php /*
+
             <div class="form__element form__element--checkbox form__element--column">
-                <p class="form-legend">Checkboxes buttons</p>
+                <p class="form-legend">Colours</p>
                 <label>
-                    <input id="" name="c-name" value="1" type="checkbox"/>
-                    <i>value 4</i>
+                    <input id="" name="color[red]" value="1" type="checkbox"/>
+                    <i>red</i>
                 </label>
                 <label>
-                    <input id="" name="c-name" value="2" type="checkbox"/>
-                    <i>value 5</i>
+                    <input id="" name="color[brown]" value="1" type="checkbox"/>
+                    <i>brown</i>
                 </label>
                 <label>
-                    <input id="" name="c-name" value="3" type="checkbox"/>
-                    <i>value 6</i>
+                    <input id="" name="color[blue]" value="1" type="checkbox"/>
+                    <i>blue</i>
                 </label>
             </div>
-            */ ?>
+
 
             <div class="form__element">
                 <p class="form-legend">Code language</p>
@@ -146,21 +159,27 @@
                     <option value="java">Java</option>
                 </select>
             </div>
-            <?php /*
+
             <div class="form__element">
                 <p class="form-legend">Multi select</p>
-                <select name="select" id="" multiple="multiple">
-                    <option value="opt-1">option-1</option>
-                    <option value="opt-2">option-2</option>
-                    <option value="opt-3">option long-3</option>
-                    <option value="opt-4">option long-4</option>
-                    <option value="opt-5">option really long-5</option>
+                <select name="day[]" id="" multiple="multiple">
+                    <option value="Monday" selected="selected">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
                 </select>
             </div>
-            */ ?>
+
             <div class="form__element form__element--checkbox form__element--column">
                 <p class="form-legend">Fill with your thoughts</p>
-                <textarea name="review" id="" cols="30" rows="10" placeholder="Type here"></textarea>
+                <textarea name="review" id="" cols="30" rows="10" placeholder="Type here">
+                    <?php if(isset($review) && $review){
+                        echo $review;
+                    } else {
+                        echo "No data was passed";
+                    }?>
+                </textarea>
             </div>
             <div class="form__lement form__lement--actions">
                 <input type="submit" value="Send form"/>

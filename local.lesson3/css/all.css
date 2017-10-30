@@ -242,7 +242,7 @@ code:after{
     padding: 5px 10px;
     border:none;
     outline:none;
-    transition:backgrond ease 150ms;
+    transition:background ease 150ms;
 }
 .form__lement--actions input:hover,
 .form__lement--actions button:hover{
