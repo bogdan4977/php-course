@@ -11,7 +11,6 @@
     <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet'>
     <link rel='stylesheet' href='css/normalize.css'>
     <link rel='stylesheet' href='css/all.css'>
-    <title>lesson_1</title>
 </head>
 <body>
 <div class='page-wrapper'>

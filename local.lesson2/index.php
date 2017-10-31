@@ -13,7 +13,6 @@
     <link rel='stylesheet' href='css/all.css'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>lesson_2</title>
 </head>
 <body>
 <div class='page-wrapper'>
