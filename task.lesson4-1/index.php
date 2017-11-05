@@ -76,14 +76,14 @@ require_once __DIR__ . '/_header.php';
         $numbersArray[] = $number;
         $result_all_numbers .= $numbersArray[$i] . " ";
     }
-    foreach ($numbersArray as $randon_number){
-        if ($randon_number % 2 == 0){
-            $evenNumberArray[] = $randon_number;
+    foreach ($numbersArray as $random_number){
+        if ($random_number % 2 == 0){
+            $evenNumberArray[] = $random_number;
         } else {
             continue;
         }
         $evenNumberArrayElements = count($evenNumberArray);
-        $result_even_numbers .= $randon_number . " ";
+        $result_even_numbers .= $random_number . " ";
     }
     ?>
 
@@ -91,7 +91,54 @@ require_once __DIR__ . '/_header.php';
     <p class="content-block__text"><strong>Even numbers</strong> <br/> <?php echo $result_even_numbers; ?></p>
     <p class="content-block__text"><strong>Even numbers QTY</strong> <br/> <?php echo $evenNumberArrayElements; ?></p>
 </section>
+<section class="content-block centered">
+    <h3 class="content-block__title">Generation Qty</h3>
+    <?php
+        $result_qty = "";
+        $random_numbers_array = array();
+        $check_sum = 0;
 
+        $qty_1 = 0;
+        $qty_2 = 0;
+        $qty_3 = 0;
+        $qty_4 = 0;
+        $qty_5 = 0;
+
+        for ($i = 0;$i < 100; $i++ ){
+            $random_number_v2 = mt_rand(1,5);
+            $random_numbers_array[] = $random_number_v2;
+        }
+        foreach ($random_numbers_array as $value){
+            switch ($value){
+                case 1 :
+                    $qty_1 += 1;
+                    break;
+                case 2:
+                    $qty_2 += 1;
+                    break;
+                case 3:
+                    $qty_3 += 1;
+                    break;
+                case 4:
+                    $qty_4 += 1;
+                    break;
+                case 5:
+                    $qty_5 += 1;
+                    break;
+            }
+        }
+    $check_sum = $qty_1 + $qty_2 + $qty_3 + $qty_4 + $qty_5;
+
+    ?>
+    <p class="content-block__text">number <i>1</i> occurred <strong><?php echo $qty_1; ?></strong> times</p>
+    <p class="content-block__text">number <i>2</i> occurred <strong><?php echo $qty_2; ?></strong> times</p>
+    <p class="content-block__text">number <i>3</i> occurred <strong><?php echo $qty_3; ?></strong> times</p>
+    <p class="content-block__text">number <i>4</i> occurred <strong><?php echo $qty_4; ?></strong> times</p>
+    <p class="content-block__text">number <i>5</i> occurred <strong><?php echo $qty_5; ?></strong> times</p>
+    <p class="content-block__text">check sum =  <i><?php echo $check_sum; ?></i></p>
+    <p class="content-block__text"><?php print_r($random_numbers_array); ?></p>
+
+</section>
 
 <?php
 /**
