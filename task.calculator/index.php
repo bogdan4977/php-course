@@ -62,7 +62,7 @@
     $number_2 = $_POST["number_2"];
 
     //calc actions
-    $calcAction = $_REQUEST["calc_action"];
+    $calcAction = $_POST["calc_action"];
 
     //results
     $calcResult = 0;
@@ -109,7 +109,7 @@
                     $calcContent = $number_1 . " % " . $number_2;
                     $calcResult = (($number_1 / $number_2) * 100) . "%";
                 }
-                //Calculator logic START
+                //Calculator logic END
                 $warningMessage = "<strong>Calculated successfully.</strong>";
             } else {
                 $warningMessage = "<strong>Ooops! </strong>Please, choose an action";
