@@ -58,17 +58,17 @@
      */
     //calc variables
     $calcStart = $_POST["calcStart"];
-    $number_1 = $_POST["number_1"];
-    $number_2 = $_POST["number_2"];
+    $number_1  = $_POST["number_1"];
+    $number_2  = $_POST["number_2"];
 
     //calc actions
     $calcAction = $_POST["calc_action"];
 
     //results
-    $calcResult = 0;
+    $calcResult  = 0;
     $calcContent = "";
     $warningMessage = "";
-    $warningClass = "notice";
+    $warningClass   = "notice";
 
     //check is $calcAction set and exist
     if ((isset($calcStart)) && $calcStart) {
