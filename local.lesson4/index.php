@@ -161,6 +161,12 @@
             <input type="hidden" name="formHide" value="1"/>
         </form>
     </section>
+    <?php
+        $test = '<section class="content-block centered">';
+        $test .= 'hello test!';
+        $test .= '</section>';
+        echo $test;
+    ;?>
     <section class="content-block centered ">
         <h4>Number table</h4>
         <?php
