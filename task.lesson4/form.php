@@ -6,7 +6,7 @@
 <form name="form_guess" action="index.php" method="post" class="form" enctype="multipart/form-data">
     <div class="form__element">
         <label for="user-number">Enter your guess..</label>
-        <input id="user-number" name="user_number" placeholder="Enter your guess.." type="number" value=""/>
+        <input id="user-number" name="user_number" placeholder="Number here" type="number" value=""/>
     </div>
     <?php /*<div class="form__element">
                 <p class="form-legend">Input text</p>
@@ -78,7 +78,7 @@
                 </textarea>
             </div>*/ ?>
     <div class="form__element form__element--actions">
-        <input type="submit" value="Send form"/>
-        <input type="reset" value="reset"/>
+        <input type="submit" value="Check"/>
+        <input type="reset" value="clear"/>
     </div>
 </form>

@@ -41,25 +41,31 @@ require_once __DIR__ . '/_header.php';
     </div>
     */ ?>
 <section class="content-block centered ">
-    <strong><a href="/">Reset</a></strong>
+    <a class="action-button" href="/">Reset</a>
 </section>
 <h2 class="main-title" title="Variables">Lesson 4 tasks</h2>
 <section class="content-block centered form-box">
     <?php
     $result_message = '';
     $user_number = $_POST['user_number'];
-    $class_checked = 'hide';
+    $class_checked = 'hide'; /*options: hide, show*/
+    $flag = true; /*options: true, false*/
 
     if (isset($user_number) && ($user_number)) {
         $computer_number = mt_rand(5, 8);
 
-        if ($user_number < 5 ){
-            $result_message = 'Number too small';
-        } elseif ($user_number > 8){
-            $result_message = 'Number too hight';
-        } elseif ($user_number == $computer_number){
-            $result_message = 'Good job - you guess it!';
-            $class_checked = 'show';
+        if ($user_number == $computer_number) {
+            $result_message = 'Good job - you guess it';
+            $flag = false;
+        } elseif ($user_number > 8) {
+            $result_message = 'Number is too hight';
+            $flag = false;
+        } elseif ($user_number < 5) {
+            $result_message = 'Number is too small';
+            $flag = false;
+        } else {
+            $result_message = 'In the range but not exact, try again!';
+            $flag = true;
         }
 
     } else {
@@ -68,11 +74,19 @@ require_once __DIR__ . '/_header.php';
     ?>
     <h3 class="content-block__title">I've made a guess - this is <i>integer</i> from <i>5</i> to <i>8</i> try to guess
         what exactly? ;)</h3>
-    <h4 class="content-block__title" style="color:darkred"><?php echo $result_message;?></h4>
-    <div class="form__element <?php echo $class_checked; ?>">
-        <strong><a href="/">Try again !!!</a></strong>
-    </div>
-    <?php require_once 'form.php'; ?>
+    <h4 class="content-block__title" style="color:darkred"><?php echo $result_message; ?></h4>
+
+    <?php if ($flag == false) { ?>
+        <div class="centered text-centered">
+            <a class="action-button" href="/">Try again !!!</a>
+        </div>
+    <?php } ?>
+
+    <?php
+    if ($flag == true) {
+        require_once 'form.php';
+    }
+    ?>
 
 </section>
 <?php /*
@@ -122,7 +136,7 @@ require_once __DIR__ . '/_header.php';
     // Цикл прервется только на третьей итерации
     ?>
 </section>
- */?>
+ */ ?>
 
 
 <?php
