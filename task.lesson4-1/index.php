@@ -50,7 +50,7 @@ require_once __DIR__ . '/_header.php';
     $result_simple_number = "";
     for ($i = 1; $i <= 100; $i++) {
         if (($i % $i === 0) && ($i % 1 === 0)) {
-            $result_simple_number.= "$i" . ", ";
+            $result_simple_number .= "$i" . ", ";
         }
     }
     ?>
@@ -72,12 +72,12 @@ require_once __DIR__ . '/_header.php';
 
 
     for ($i = 0; $i < 100; $i++) {
-        $number = mt_rand(0,100);
+        $number = mt_rand(0, 100);
         $numbersArray[] = $number;
         $result_all_numbers .= $numbersArray[$i] . " ";
     }
-    foreach ($numbersArray as $random_number){
-        if ($random_number % 2 == 0){
+    foreach ($numbersArray as $random_number) {
+        if ($random_number % 2 == 0) {
             $evenNumberArray[] = $random_number;
         } else {
             continue;
@@ -94,39 +94,39 @@ require_once __DIR__ . '/_header.php';
 <section class="content-block centered">
     <h3 class="content-block__title">Generation Qty</h3>
     <?php
-        $result_qty = "";
-        $random_numbers_array = array();
-        $check_sum = 0;
+    $result_qty = "";
+    $random_numbers_array = array();
+    $check_sum = 0;
 
-        $qty_1 = 0;
-        $qty_2 = 0;
-        $qty_3 = 0;
-        $qty_4 = 0;
-        $qty_5 = 0;
+    $qty_1 = 0;
+    $qty_2 = 0;
+    $qty_3 = 0;
+    $qty_4 = 0;
+    $qty_5 = 0;
 
-        for ($i = 0;$i < 100; $i++ ){
-            $random_number_v2 = mt_rand(1,5);
-            $random_numbers_array[] = $random_number_v2;
+    for ($i = 0; $i < 100; $i++) {
+        $random_number_v2 = mt_rand(1, 5);
+        $random_numbers_array[] = $random_number_v2;
+    }
+    foreach ($random_numbers_array as $value) {
+        switch ($value) {
+            case 1 :
+                $qty_1 += 1;
+                break;
+            case 2:
+                $qty_2 += 1;
+                break;
+            case 3:
+                $qty_3 += 1;
+                break;
+            case 4:
+                $qty_4 += 1;
+                break;
+            case 5:
+                $qty_5 += 1;
+                break;
         }
-        foreach ($random_numbers_array as $value){
-            switch ($value){
-                case 1 :
-                    $qty_1 += 1;
-                    break;
-                case 2:
-                    $qty_2 += 1;
-                    break;
-                case 3:
-                    $qty_3 += 1;
-                    break;
-                case 4:
-                    $qty_4 += 1;
-                    break;
-                case 5:
-                    $qty_5 += 1;
-                    break;
-            }
-        }
+    }
     $check_sum = $qty_1 + $qty_2 + $qty_3 + $qty_4 + $qty_5;
 
     ?>
@@ -135,9 +135,34 @@ require_once __DIR__ . '/_header.php';
     <p class="content-block__text">number <i>3</i> occurred <strong><?php echo $qty_3; ?></strong> times</p>
     <p class="content-block__text">number <i>4</i> occurred <strong><?php echo $qty_4; ?></strong> times</p>
     <p class="content-block__text">number <i>5</i> occurred <strong><?php echo $qty_5; ?></strong> times</p>
-    <p class="content-block__text">check sum =  <i><?php echo $check_sum; ?></i></p>
+    <p class="content-block__text">check sum = <i><?php echo $check_sum; ?></i></p>
     <p class="content-block__text"><?php print_r($random_numbers_array); ?></p>
 
+</section>
+<section class="content-block centered">
+    <h3 class="content-block__title">Color table</h3>
+    <?php
+    $r = 0;
+    $g = 0;
+    $b = 0;
+    $t = 0.2;
+    echo '<table>';
+    for ($row = 0; $row < 3; $row++) {
+        echo '<tr>';
+        for ($cell = 0; $cell < 5; $cell++) {
+
+            if ($cell % 2 == 0) {
+                $r = mt_rand(0, 256);
+                $g = mt_rand(0, 256);
+                $b = mt_rand(0, 256);
+                $t = mt_rand(0.1, 1);
+            }
+            echo "<td style='background-color: rgba($r, $g, $b, $t); color: #fff;'>;)</td>";
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+    ?>
 </section>
 
 <?php
