@@ -12,7 +12,7 @@
     <meta name='robots' content='index, follow'>
     <meta name='author' content='sedovolosy.com'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Tasks les4</title>
+    <title>Functions</title>
     <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet'>
     <link rel='stylesheet' href='css/normalize.css'>
     <link rel='stylesheet' href='css/all.css'>
