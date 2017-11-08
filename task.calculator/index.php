@@ -70,6 +70,52 @@
     $warningMessage = "";
     $warningClass   = "notice";
 
+    /**
+     * Action Functions
+    */
+    function calcPlus(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . " + " . $number_2;
+        $calcResult = ($number_1 + $number_2);
+    }
+
+    function calcMinus(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . " - " . $number_2;
+        $calcResult = ($number_1 - $number_2);
+    }
+
+    function calcMultiply(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . " x " . $number_2;
+        $calcResult = ($number_1 * $number_2);
+    }
+
+    function calcDivide(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . " &#247; " . $number_2;
+        $calcResult = ($number_1 / $number_2);
+    }
+
+    function calcSqrt(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = "&#8730; " . $number_1;
+        $calcResult = sqrt($number_1);
+        $number_2 = 0;
+    }
+
+    function calcPow(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . "<sup>$number_2</sup>";
+        $calcResult = pow($number_1, $number_2);
+    }
+
+    function calcPercent(){
+        global $calcContent, $calcResult, $number_1, $number_2;
+        $calcContent = $number_1 . " % " . $number_2;
+        $calcResult = (($number_1 / $number_2) * 100) . "%";
+    }
+
     //check is $calcAction set and exist
     if ((isset($calcStart)) && $calcStart) {
         //check is number fields are filled
@@ -81,33 +127,25 @@
                 //Calculator logic START
                 if ((string)$calcAction === "plus") {
                     //plus
-                    $calcContent = $number_1 . " + " . $number_2;
-                    $calcResult = ($number_1 + $number_2);
+                    calcPlus();
                 } elseif ((string)$calcAction === "minus") {
                     //minus
-                    $calcContent = $number_1 . " - " . $number_2;
-                    $calcResult = ($number_1 - $number_2);
+                    calcMinus();
                 } elseif ((string)$calcAction === "multiply") {
                     //multiply
-                    $calcContent = $number_1 . " x " . $number_2;
-                    $calcResult = ($number_1 * $number_2);
+                    calcMultiply();
                 } elseif ((string)$calcAction === "divide") {
                     //divide
-                    $calcContent = $number_1 . " &#247; " . $number_2;
-                    $calcResult = ($number_1 / $number_2);
+                    calcDivide();
                 } elseif ((string)$calcAction === "sqrt") {
                     //sqrt
-                    $calcContent = "&#8730; " . $number_1;
-                    $calcResult = sqrt($number_1);
-                    $number_2 = 0;
+                    calcSqrt();
                 } elseif ((string)$calcAction === "pow") {
                     //pow
-                    $calcContent = $number_1 . "<sup>$number_2</sup>";
-                    $calcResult = pow($number_1, $number_2);
+                    calcPow();
                 } elseif ((string)$calcAction === "percent") {
-                    //persent
-                    $calcContent = $number_1 . " % " . $number_2;
-                    $calcResult = (($number_1 / $number_2) * 100) . "%";
+                    //percent
+                    calcPercent();
                 }
                 //Calculator logic END
                 $warningMessage = "<strong>Calculated successfully.</strong>";
