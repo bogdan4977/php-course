@@ -1,0 +1,27 @@
+{
+  "name": "grunt-getting-started",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-include-replace": "^5.0.0",
+    "grunt-postcss": "latest",
+    "jshint-stylish": "latest"
+  },
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-htmlmin": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bogdan Sedovolosy",
+  "license": "ISC",
+  "description": "initial project template"
+}

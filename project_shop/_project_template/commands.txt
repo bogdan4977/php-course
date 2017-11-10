@@ -1,0 +1,5 @@
+### intstall grunt globbal ###
+npm install -g grunt-cli
+
+### intstall modules locally (from package.json) ###
+npm install
