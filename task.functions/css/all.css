@@ -70,7 +70,19 @@ html, body{
 .menu__item a{
     display: block;
     text-transform: uppercase;
-    padding: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #ff763d;
+    border: 1px solid #ff763d;
+    font-weight: bold;
+    transition: ease 200ms;
+}
+.menu__item a:hover{
+    background-color: #ff763d;
+    color: #fff;
+}
+.menu__item a:active{
+    opacity: 0.6;
 }
 /*big banner*/
 .big-banner{
@@ -274,4 +286,17 @@ td{
 }
 .show{
     display: block;
+}
+.necessary{
+    position: relative;
+}
+.necessary:after{
+    display: block;
+    position: absolute;
+    content: "*";
+    top:0;
+    right: 0;
+    color: darkred;
+    font-size: 16px;
+    font-weight: bold;
 }

@@ -58,13 +58,14 @@ require_once __DIR__ . '/_header.php';
     $answerMessage = "";
     $actioText = "";
 
-    function calcSum($inputValue){
+    function calcSum($inputValue)
+    {
         global $actioText;
         if ($inputValue <= 0) {
             return 0;
         } else {
             // check is it last or not value
-            if ($inputValue > 1){
+            if ($inputValue > 1) {
                 $actioText .= "$inputValue + ";
             } else {
                 $actioText .= "$inputValue";
@@ -85,6 +86,19 @@ require_once __DIR__ . '/_header.php';
     <?php require_once 'form.php'; ?>
     <p class="content-block__text"><i>Action :</i> <?php echo $actioText; ?></p>
     <p class="content-block__text"><i>Result :</i> <?php echo $answerMessage; ?></p>
+</section>
+<h2 class="main-title" title="Variables">TASKS FROM DOC</h2>
+<section class="content-block centered ">
+    <?php
+    $currentURL = $_SERVER['REQUEST_URI'];
+    ?>
+    <h3 class="content-block__title">Tasks links</h3>
+    <nav class='navigation centered'>
+        <ul class='menu'>
+            <li class='menu__item'><a href="<?php echo $currentURL . 'booking.php' ?>">Booking task</a></li>
+            <li class='menu__item'><a href="<?php echo $currentURL . 'silence.php' ?>">Silence is gilden</a></li>
+        </ul>
+    </nav>
 </section>
 <?php
 /**
