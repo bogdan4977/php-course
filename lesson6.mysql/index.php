@@ -4,8 +4,38 @@
  */
 require_once __DIR__ . '/_header.php';
 ?>
+<?php
+require_once 'config.php'; // подключаем скрипт
 
-<h1 class="main-title">Functions lesson#5</h1>
+// подключаемся к серверу
+$link = mysqli_connect($host, $user, $password, $database)
+or die("Ошибка " . mysqli_error($link));
+
+$query = "SELECT * FROM oc_category";
+$result = mysqli_query($link, $query) or
+die("Error" . mysqli_error($link));
+
+if($result){
+    $rows = mysqli_num_rows($result); //кол получ строк
+    echo "<table><tr><th>Id</th><th>MODEL</th><th>Manufacturer</th></tr>";
+    for ($i = 0 ; $i < $rows ; ++$i)
+    {
+        $row = mysqli_fetch_assoc($result);
+        echo "<pre>";
+        print_r($row);
+        echo "</pre>";
+
+    }
+    echo "</table>";
+
+
+    echo "Выполнение запроса прошло успешно";
+}
+// закрываем подключение
+mysqli_close($link);
+
+?>
+<h1 class="main-title">MySQL</h1>
 <?php /*
     <!-- page layout -->
     <nav class='navigation centered'>
@@ -54,7 +84,7 @@ require_once __DIR__ . '/_header.php';
 
     ?>
     <?php /* require_once 'form.php';*/ ?>
-    <p class="content-block__text"><i>Action :</i> <?php echo $actioText; ?></p>
+    <p class="content-block__text"></p>
     <p class="content-block__text"></p>
 </section>
 <?php
