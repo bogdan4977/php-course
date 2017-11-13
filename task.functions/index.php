@@ -95,8 +95,10 @@ require_once __DIR__ . '/_header.php';
     <h3 class="content-block__title">Tasks links</h3>
     <nav class='navigation centered'>
         <ul class='menu'>
-            <li class='menu__item'><a href="<?php echo $currentURL . 'booking.php' ?>">Booking task</a></li>
-            <li class='menu__item'><a href="<?php echo $currentURL . 'silence.php' ?>">Silence is gilden</a></li>
+            <li class='menu__item'><a href="booking.php">Booking task</a></li>
+            <li class='menu__item'><a href="silence.php">Silence is gilden</a></li>
+            <li class='menu__item'><a href="registration.php">Registration</a></li>
+            <li class='menu__item'><a href="array.php">Array</a></li>
         </ul>
     </nav>
 </section>

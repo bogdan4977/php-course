@@ -46,7 +46,7 @@ if (isset($n) && ($n)) {
         <div class="form__element">
             <p class="form-legend necessary">Qty</p>
             <label for="days">Enter Qty</label>
-            <input id="days" name="n" placeholder="days" type="number" value=""/>
+            <input id="days" name="n" placeholder="enter N" type="number" value=""/>
         </div>
 
         <div class="form__element form__element--actions">
