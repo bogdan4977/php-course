@@ -80,6 +80,7 @@ mysqli_close($link);
 
 <section class="content-block centered ">
     <h2 class="content-block__title">MySQL</h2>
+    <a href="form_product.php">form_product.php</a>
     <?php
 
     ?>
