@@ -23,7 +23,7 @@ $show_price = "";
 $show_model = "";
 $show_qty = "";
 
-if (isset($p_name, $p_price, $p_model, $p_qty) && $p_name && $p_price && $p_model && $p_qty){
+if (isset($p_name) && isset($p_price) && isset($p_model) && isset($p_qty)){
     $show_name = $p_name;
     $show_price = $p_price;
     $show_model = $p_model;
@@ -33,9 +33,10 @@ if (isset($p_name, $p_price, $p_model, $p_qty) && $p_name && $p_price && $p_mode
 
 
 ?>
+
 <h1 class="main-title">MySQL #2</h1>
 
-<section class="content-block centered ">
+<section class="content-block centered " style="background-color: #eeeeee; ">
     <a class="action-button" href="form_product.php">Reset</a>
     <a class="action-button" href="index.php">back</a>
 </section>
@@ -61,7 +62,7 @@ if (isset($p_name, $p_price, $p_model, $p_qty) && $p_name && $p_price && $p_mode
         </div>
 
         <div class="form__element">
-            <label for="user-number">Price</label>
+            <label for="user-number">QTY</label>
             <input id="user-number" name="p_qty" placeholder="qty" type="number" value="" step="any"/>
         </div>
 
