@@ -2,7 +2,7 @@
 // адрес сервера
 $host = 'localhost';
 // имя базы данных
-$database = 'php5';
+$database = 'php_task1';
 // имя пользователя
 $user = 'root';
 // пароль

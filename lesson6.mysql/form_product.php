@@ -23,14 +23,14 @@ $show_price = "";
 $show_model = "";
 $show_qty = "";
 
-if (isset($p_name) && isset($p_price) && isset($p_model) && isset($p_qty)){
+if (isset($p_name) && $p_name && isset($p_price) && isset($p_model) && isset($p_qty)){
     $show_name = $p_name;
     $show_price = $p_price;
     $show_model = $p_model;
     $show_qty = $p_qty;
+} else {
+    $show_name = 'Enter data';
 }
-
-
 
 ?>
 
