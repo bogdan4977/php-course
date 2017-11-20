@@ -81,9 +81,8 @@ mysqli_close($link);
 <section class="content-block centered ">
     <h2 class="content-block__title">MySQL</h2>
     <a class="action-button" href="form_product.php">form_product.php</a>
-    <?php
+    <a class="action-button" href="product_lesson.php">product_lesson script</a>
 
-    ?>
     <?php /* require_once 'form.php';*/ ?>
     <p class="content-block__text"></p>
     <p class="content-block__text"></p>
