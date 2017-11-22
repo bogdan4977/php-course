@@ -44,11 +44,11 @@ if(isset($_POST['name'])){
         $uploadfile = '';
     }
 
-    $sql = "INSERT INTO `data` SET `image` = '$uploadfile'";
+    $sql = "INSERT INTO data(image) VALUES ('$uploadfile')";
     $result = mysqli_query($link, $sql) or die("Ошибка " . mysqli_error($link));
     $id = mysqli_insert_id($link);
 
-    $sql_description = "INSERT INTO `data_description` SET `id` = '$id', `name` = '$name', `description` = '$description' ";
+    $sql_description = "INSERT INTO data_description(id, name, description) VALUES('$id','$name','$description')";
 
     $result = mysqli_query($link, $sql_description)or die("Ошибка " . mysqli_error($link));
 
