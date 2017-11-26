@@ -65,7 +65,6 @@ foreach ($multiArray as $robot => $data){
 
 $indexArray = array("lemon", "orange", "banana", "apple");
 asort($indexArray);
-krsort($indexArray);
 
 $users = array(
     array( 'id'=>10, 'name'=>'Фёдор' ),
