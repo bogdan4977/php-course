@@ -6,6 +6,11 @@ if(!isset($_SESSION['count'])){
     $_SESSION['count'] += 1;
 }
 /**
+ * 1. Создать форму записи в базу именю юзера и пароль - пароль записать м md5
+ * 2. Проверить форму Создать сессионную переменную - переменная authorize = 1
+ * 3. Проверка есть ли authorize +) Выводим имя -) редирект на регистрацию
+*/
+/**
  * Get HEADER
  */
 require_once __DIR__ . '/_header.php';
@@ -64,3 +69,5 @@ require_once __DIR__ . '/_header.php';
  */
 require_once __DIR__ . '/_footer.php';
 ?>
+
+
