@@ -74,17 +74,17 @@ if (isset($p_name) && $p_name && isset($p_price) &&($p_price) && isset($p_model)
 
         <div class="form__element necessary">
             <label for="user-number">Name</label>
-            <input id="user-number" name="p_name" placeholder="name" type="text" value="<?php echo $p_name;?>"/>
+            <input id="user-number" name="p_name" placeholder="name" type="text" value="<?php echo $p_name . '-1';?>"/>
         </div>
 
         <div class="form__element necessary">
             <label for="user-number">Price</label>
-            <input id="user-number" name="p_price" placeholder="price" type="number" value="<?php echo $p_price; ?>" step="any"/> UAH
+            <input id="user-number" name="p_price" placeholder="price" type="number" value="<?php echo $p_price + 10; ?>" step="any"/> UAH
         </div>
 
         <div class="form__element">
             <label for="user-number">Model</label>
-            <input id="user-number" name="p_model" placeholder="model" type="text" value="<?php echo $p_model; ?>"/>
+            <input id="user-number" name="p_model" placeholder="model" type="text" value="<?php echo $p_model . '-x'; ?>"/>
         </div>
 
         <div class="form__element necessary">

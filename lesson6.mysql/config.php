@@ -2,7 +2,7 @@
 // адрес сервера
 $host = 'localhost';
 // имя базы данных
-$database = 'php_task1';
+$database = 'study_base';
 // имя пользователя
 $user = 'root';
 // пароль

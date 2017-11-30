@@ -4,38 +4,8 @@
  */
 require_once __DIR__ . '/_header.php';
 ?>
-<?php
-require_once 'config.php'; // подключаем скрипт
 
-// подключаемся к серверу
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
-
-$query = "SELECT * FROM oc_category";
-$result = mysqli_query($link, $query) or
-die("Error" . mysqli_error($link));
-
-if($result){
-    $rows = mysqli_num_rows($result); //кол получ строк
-    echo "<table><tr><th>Id</th><th>MODEL</th><th>Manufacturer</th></tr>";
-    for ($i = 0 ; $i < $rows ; ++$i)
-    {
-        $row = mysqli_fetch_assoc($result);
-        echo "<pre>";
-//        print_r($row);
-        echo "</pre>";
-
-    }
-    echo "</table>";
-
-
-    echo "Выполнение запроса прошло успешно";
-}
-// закрываем подключение
-mysqli_close($link);
-
-?>
-<h1 class="main-title">MySQL</h1>
+<h1 class="main-title">Functions lesson#12</h1>
 <?php /*
     <!-- page layout -->
     <nav class='navigation centered'>
@@ -70,23 +40,34 @@ mysqli_close($link);
         </section>
     </div>
     */ ?>
+<?php
+    //create file
+    $my_file = "my.txt";
+    $file_operate = fopen($my_file, "w");
+
+    //file data
+    $data_1 = "Hello dude!";
+
+    //write to file
+    fwrite($file_operate, $data_1);
+
+    //read file
+    $file_data = file($my_file);
+
+    fclose($file_operate);
+?>
+
 <section class="content-block centered ">
     <a class="action-button" href="/">Reset</a>
+    <a class="action-button" href="write_check.php">Write with check</a>
+    <a class="action-button" href="file_transfer.php">Download file</a>
 </section>
-<h2 class="main-title" title="Variables">Functions task</h2>
-<section class="content-block centered form-box">
-
-</section>
-
+<h2 class="main-title" title="Variables">Functions Files</h2>
 <section class="content-block centered ">
-    <h2 class="content-block__title">MySQL</h2>
-    <a class="action-button" href="form_product.php">form_product.php</a>
-    <a class="action-button" href="product_lesson.php">product_lesson script</a>
-
-    <?php /* require_once 'form.php';*/ ?>
-    <p class="content-block__text"></p>
-    <p class="content-block__text"></p>
+    <h2 class="content-block__title">My file</h2>
+    <p class="content-block__text"><?php print_r($file_data) ?></p>
 </section>
+
 <?php
 /**
  * Get FOOTER

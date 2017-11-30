@@ -1,41 +1,14 @@
 <?php
+session_start();
+$_SESSION['count'] = array();
+session_destroy();
 /**
  * Get HEADER
  */
 require_once __DIR__ . '/_header.php';
 ?>
-<?php
-require_once 'config.php'; // подключаем скрипт
 
-// подключаемся к серверу
-$link = mysqli_connect($host, $user, $password, $database)
-or die("Ошибка " . mysqli_error($link));
-
-$query = "SELECT * FROM oc_category";
-$result = mysqli_query($link, $query) or
-die("Error" . mysqli_error($link));
-
-if($result){
-    $rows = mysqli_num_rows($result); //кол получ строк
-    echo "<table><tr><th>Id</th><th>MODEL</th><th>Manufacturer</th></tr>";
-    for ($i = 0 ; $i < $rows ; ++$i)
-    {
-        $row = mysqli_fetch_assoc($result);
-        echo "<pre>";
-//        print_r($row);
-        echo "</pre>";
-
-    }
-    echo "</table>";
-
-
-    echo "Выполнение запроса прошло успешно";
-}
-// закрываем подключение
-mysqli_close($link);
-
-?>
-<h1 class="main-title">MySQL</h1>
+<h1 class="main-title">Functions lesson#12</h1>
 <?php /*
     <!-- page layout -->
     <nav class='navigation centered'>
@@ -71,22 +44,14 @@ mysqli_close($link);
     </div>
     */ ?>
 <section class="content-block centered ">
-    <a class="action-button" href="/">Reset</a>
+    <a class="action-button" href="index.php">index.php</a>
 </section>
-<h2 class="main-title" title="Variables">Functions task</h2>
-<section class="content-block centered form-box">
-
-</section>
-
+<h2 class="main-title" title="Variables">Session-2 Close</h2>
 <section class="content-block centered ">
-    <h2 class="content-block__title">MySQL</h2>
-    <a class="action-button" href="form_product.php">form_product.php</a>
-    <a class="action-button" href="product_lesson.php">product_lesson script</a>
-
-    <?php /* require_once 'form.php';*/ ?>
-    <p class="content-block__text"></p>
-    <p class="content-block__text"></p>
+    <h3 class="content-block__title">Session Count</h3>
+    <p class="content-block__text">Your session expired</p>
 </section>
+
 <?php
 /**
  * Get FOOTER
