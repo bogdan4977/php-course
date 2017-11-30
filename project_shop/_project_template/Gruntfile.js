@@ -7,6 +7,17 @@ module.exports = function (grunt) {
         jshint: {
             all: ['!Gruntfile.js', 'src/js/*.js', 'src/js/*.js']
         },
+        //image
+        image:{
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/images',
+                    src: ['**/*.{jpg,gif,svg}'],
+                    dest: 'pub/images'
+                }]
+            }
+        },
         //less task
         less: {
             all: {
@@ -32,7 +43,11 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'pub/js/main.min.js': ['src/js/main.js']
+                    'pub/js/main.min.js': [
+                        'src/js/jquery-3.2.1.min.js',
+                        'src/js/swiper.min.js',
+                        'src/js/main.js'
+                    ]
                 }
             }
         },
@@ -66,13 +81,13 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ['src/css/**/*.less', 'src/js/main.js'],
-                tasks: ['less', 'autoprefixer', 'cssmin', 'uglify']
+                tasks: ['includereplace', 'less', 'autoprefixer', 'cssmin', 'uglify']
             }
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'includereplace']);
+    grunt.registerTask('default', ['includereplace', 'less', 'autoprefixer', 'cssmin', 'uglify', 'image']);
 
     // Load the plugin that provides the "jshint" task
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -95,4 +110,6 @@ module.exports = function (grunt) {
     //include-replace
     grunt.loadNpmTasks('grunt-include-replace');
 
+    //image
+    grunt.loadNpmTasks('grunt-image');
 };

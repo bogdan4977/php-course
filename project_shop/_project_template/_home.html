@@ -2,18 +2,109 @@
 
 <header class="header">
     <div class="content-wrapper">
-        <div class="header__top"></div>
-        <div class="header__bottom"></div>
+        <div class="header-top">
+            <div class="header-top__logo">
+                <img src="images/logo.png" alt="Fooseshoes">
+            </div>
+            <div class="header-top__search">
+                <form action="" method="post" id="header-search">
+                    <div class="header-search-field">
+                        <input type="text" placeholder="search">
+                    </div>
+                    <button type="submit">
+                        <svg>
+                            <use xlink:href="#icon-search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header-top__login">
+                <button type="button" id="log-reg"></button>
+                <form action="" method="post" class="login-register-form">
+                    <h4>Log in</h4>
+                    <fieldset>
+                        <input name="username" type="text" placeholder="Name">
+                        <input name="password" type="password" placeholder="password">
+                    </fieldset>
+                    <button type="submit">Log in</button>
+                    <em>or</em>
+                    <h4>Register account</h4>
+                    <a href="#">Register</a>
+                </form>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="header-bottom__menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-bottom__action ">
+            <div class="header-cart">
+                <button class="header-cart__button">
+                    <svg>
+                        <use xlink:href="#icon-cart"></use>
+                    </svg>
+                </button>
+                <span class="header-cart__counter">1</span>
+            </div>
+        </div>
     </div>
 </header>
 <section class="home-banner">
-
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url('images/slide-1.jpg')">
+                <div class="slide-inner">
+                    <strong class="price-box">$145.99</strong>
+                    <h3 class="slide-inner__title">Pink Shoes 2017 Collection</h3>
+                    <p class="slide-inner__text">Nunc non fermentum nunc. Sed ut ante
+                        eget leo tempor consequat sit amet eu orci.
+                        Donec dignissim dolor eget..</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background: url('images/slide-1.jpg'">
+                <div class="slide-inner">
+                    <strong class="price-box">$98</strong>
+                    <h3 class="slide-inner__title">Pink Shoes 2017 Collection</h3>
+                    <p class="slide-inner__text">Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit.
+                        Doloribus in itaque laudantium maiores molestias officiis,
+                        optio quis suscipit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="main-content">
-    <section class="category-banners">
+    <section class="category-banners-box">
         <div class="content-wrapper">
-
+            <ul class="category-banners">
+                <li class="category-banners__banner">
+                    <a href="#" class="banner-link">
+                        <img src="images/cat-banner-sale.jpg" alt=""/>
+                        <em class="banner-link__title">on sale</em>
+                    </a>
+                </li>
+                <li class="category-banners__banner">
+                    <a href="#" class="banner-link">
+                        <img src="images/cat-banner-offers.jpg" alt=""/>
+                        <em class="banner-link__title">special offers</em>
+                    </a>
+                </li>
+                <li class="category-banners__banner">
+                    <a href="#" class="banner-link">
+                        <img src="images/cat-banner-musthave.jpg" alt=""/>
+                        <em class="banner-link__title">must have</em>
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
     <div class="featured-products">
@@ -25,10 +116,10 @@
             <ul class="products-grid">
                 <li class="grid-item">
                     <a href="#" class="grid-item__photo">
-                        <img class="grid-item__photo-img" src="#" alt="">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
                     </a>
                     <div class="grid-item__info">
-                        <strong class="grid-item__info-price">$123</strong>
+                        <strong class="price-box">$123</strong>
                         <h3 class="grid-item__info-name">Product</h3>
                         <div class="grid-item__info-actions">
                             <a class="grid-item-action grid-item-action--tocart">
@@ -49,10 +140,10 @@
                 </li>
                 <li class="grid-item">
                     <a href="#" class="grid-item__photo">
-                        <img class="grid-item__photo-img" src="#" alt="">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
                     </a>
                     <div class="grid-item__info">
-                        <strong class="grid-item__info-price">$123</strong>
+                        <strong class="price-box">$123</strong>
                         <h3 class="grid-item__info-name">Product</h3>
                         <div class="grid-item__info-actions">
                             <a class="grid-item-action grid-item-action--tocart">
@@ -73,10 +164,92 @@
                 </li>
                 <li class="grid-item">
                     <a href="#" class="grid-item__photo">
-                        <img class="grid-item__photo-img" src="#" alt="">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
                     </a>
                     <div class="grid-item__info">
-                        <strong class="grid-item__info-price">$123</strong>
+                        <strong class="price-box">$123</strong>
+                        <h3 class="grid-item__info-name">Product</h3>
+                        <div class="grid-item__info-actions">
+                            <a class="grid-item-action grid-item-action--tocart">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                            <a class="grid-item-action grid-item-action--quickview">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid-item__badges">
+                        <em class="grid-badge grid-badge--outofstock">Out of stock</em>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="featured-products">
+        <div class="featured-products__header">
+            <h2 class="products-title">Best sellers</h2>
+            <a class="main-btn" href="#">Show All</a>
+        </div>
+        <div class="featured-products__content">
+            <ul class="products-grid">
+                <li class="grid-item">
+                    <a href="#" class="grid-item__photo">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
+                    </a>
+                    <div class="grid-item__info">
+                        <strong class="price-box">$123</strong>
+                        <h3 class="grid-item__info-name">Product</h3>
+                        <div class="grid-item__info-actions">
+                            <a class="grid-item-action grid-item-action--tocart">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                            <a class="grid-item-action grid-item-action--quickview">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid-item__badges">
+                        <em class="grid-badge grid-badge--outofstock">Out of stock</em>
+                    </div>
+                </li>
+                <li class="grid-item">
+                    <a href="#" class="grid-item__photo">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
+                    </a>
+                    <div class="grid-item__info">
+                        <strong class="price-box">$123</strong>
+                        <h3 class="grid-item__info-name">Product</h3>
+                        <div class="grid-item__info-actions">
+                            <a class="grid-item-action grid-item-action--tocart">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                            <a class="grid-item-action grid-item-action--quickview">
+                                <svg>
+                                    <use xlink:href="#"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid-item__badges">
+                        <em class="grid-badge grid-badge--outofstock">Out of stock</em>
+                    </div>
+                </li>
+                <li class="grid-item">
+                    <a href="#" class="grid-item__photo">
+                        <img class="grid-item__photo-img" src="images/ws-1.jpg" alt="">
+                    </a>
+                    <div class="grid-item__info">
+                        <strong class="price-box">$123</strong>
                         <h3 class="grid-item__info-name">Product</h3>
                         <div class="grid-item__info-actions">
                             <a class="grid-item-action grid-item-action--tocart">
@@ -121,15 +294,86 @@
     </div>
 </section>
 <footer class="footer">
-    <div class="footer__column">
-        <h4>About Us</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur earum, eius est ipsam,
-            maiores obcaecati, officiis perferendis perspiciatis quia rerum vero voluptatem! Adipisci animi architecto
-            consequatur culpa nesciunt vero!</p>
-    </div>
-    <div class="footer__column">
-        <h4></h4>
-    </div>
-    <div class="footer__column"></div>
+    <section class="footer-top">
+        <div class="footer-top__column">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur earum, eius est ipsam,
+                maiores obcaecati, officiis perferendis perspiciatis quia rerum vero voluptatem! Adipisci animi architecto
+                consequatur culpa nesciunt vero!</p>
+        </div>
+        <div class="footer-top__column">
+            <h4>Useful links</h4>
+            <ul class="footer-links">
+                <li class="footer-links__item">
+                    <a href="#">About us</a>
+                </li>
+                <li class="footer-links__item" >
+                    <a href="#">Privacy policy</a>
+                </li>
+                <li class="footer-links__item" >
+                    <a href="#">Cookie policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-top__column">
+            <h4>Contact info</h4>
+            <ul class="footer-contacts">
+                <li class="footer-contacts__item">
+                    <h4>Adress:</h4>
+                    <p>27 Jorda str., New York</p>
+                </li>
+                <li>
+                    <h4>Phone:</h4>
+                    <p>+1 (519) 967-3344</p>
+                </li>
+                <li>
+                    <h4>Email:</h4>
+                    <p><a href="mailto:fooshoess@gmail.com">fooshoess@gmail.com</a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-bottom">
+        <div class="footer-bottom__column">
+            <div class="footer-subscribe">
+                <form action="/" method="post" id="footer-subscribe">
+                    <input name="subscribe" type="email" placeholder="enter your email"/>
+                    <button type="submit">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom__column">
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-fb"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="copyright">
+        <p>Coyright &copy; Fooseshoes 2017</p>
+    </section>
 </footer>
 @@include('_footer.html')
