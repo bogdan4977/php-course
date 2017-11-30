@@ -22,7 +22,7 @@ if($result){
     {
         $row = mysqli_fetch_assoc($result);
         echo "<pre>";
-        print_r($row);
+//        print_r($row);
         echo "</pre>";
 
     }
