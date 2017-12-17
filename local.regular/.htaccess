@@ -1,0 +1,4 @@
+#deny from all
+<Files form.php>
+deny from all
+</Files>

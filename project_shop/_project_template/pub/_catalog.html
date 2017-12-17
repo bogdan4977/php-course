@@ -8,14 +8,160 @@
     <meta name="author" content="sedovolosy.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initial page</title>
-    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon-search" viewBox="0 0 56.966 56.966">
+        <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+	s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+	c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+	s-17-7.626-17-17S14.61,6,23.984,6z"/>
+    </symbol>
+
+</svg>
 <div class="page-wrapper">
+    <header class="header">
+        <div class="content-wrapper">
+            <div class="header-top">
+                <div class="header-top__logo">
+                    <img src="images/logo.png" alt="Fooseshoes">
+                </div>
+                <div class="header-top__search">
+                    <form action="" method="post" id="header-search">
+                        <div class="header-search-field">
+                            <input name="top_search" type="text" placeholder="">
+                        </div>
+                        <button type="submit">
+                            <svg>
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-top__login">
+                    <button type="button" id="log-reg"><i>login</i> or <i>register</i></button>
+                    <form action="" method="post" class="login-register-form">
+                        <h4>Log in</h4>
+                        <fieldset>
+                            <input name="username" type="text" placeholder="Name">
+                            <input name="password" type="password" placeholder="password">
+                        </fieldset>
+                        <button type="submit">Log in</button>
+                        <em>or</em>
+                        <h4>Register account</h4>
+                        <a href="#">Register</a>
+                    </form>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <nav class="header-bottom__menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-bottom__action ">
+                <div class="header-cart">
+                    <button class="header-cart__button">
+                        <svg>
+                            <use xlink:href="#icon-cart"></use>
+                        </svg>
+                    </button>
+                    <span class="header-cart__counter">1</span>
+                </div>
+            </div>
+        </div>
+    </header>
 <p>Test text</p>
+<footer class="footer">
+    <section class="footer-top">
+        <div class="footer-top__column">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur earum, eius est ipsam,
+                maiores obcaecati, officiis perferendis perspiciatis quia rerum vero voluptatem! Adipisci animi architecto
+                consequatur culpa nesciunt vero!</p>
+        </div>
+        <div class="footer-top__column">
+            <h4>Useful links</h4>
+            <ul class="footer-links">
+                <li class="footer-links__item">
+                    <a href="#">About us</a>
+                </li>
+                <li class="footer-links__item" >
+                    <a href="#">Privacy policy</a>
+                </li>
+                <li class="footer-links__item" >
+                    <a href="#">Cookie policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-top__column">
+            <h4>Contact info</h4>
+            <ul class="footer-contacts">
+                <li class="footer-contacts__item">
+                    <h4>Adress:</h4>
+                    <p>27 Jorda str., New York</p>
+                </li>
+                <li>
+                    <h4>Phone:</h4>
+                    <p>+1 (519) 967-3344</p>
+                </li>
+                <li>
+                    <h4>Email:</h4>
+                    <p><a href="mailto:fooshoess@gmail.com">fooshoess@gmail.com</a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-bottom">
+        <div class="footer-bottom__column">
+            <div class="footer-subscribe">
+                <form action="/" method="post" id="footer-subscribe">
+                    <input name="subscribe" type="email" placeholder="enter your email"/>
+                    <button type="submit">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom__column">
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-fb"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="copyright">
+        <p>Coyright &copy; Fooseshoes 2017</p>
+    </section>
+</footer>
 </div>
 <script src="js/main.min.js"></script>
 </body>

@@ -8,69 +8,76 @@
     <meta name="author" content="sedovolosy.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initial page</title>
-    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
-<div class="page-wrapper">
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon-search" viewBox="0 0 56.966 56.966">
+        <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+	s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+	c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+	s-17-7.626-17-17S14.61,6,23.984,6z"/>
+    </symbol>
 
-<header class="header">
-    <div class="content-wrapper">
-        <div class="header-top">
-            <div class="header-top__logo">
-                <img src="images/logo.png" alt="Fooseshoes">
+</svg>
+<div class="page-wrapper">
+    <header class="header">
+        <div class="content-wrapper">
+            <div class="header-top">
+                <div class="header-top__logo">
+                    <img src="images/logo.png" alt="Fooseshoes">
+                </div>
+                <div class="header-top__search">
+                    <form action="" method="post" id="header-search">
+                        <div class="header-search-field">
+                            <input name="top_search" type="text" placeholder="">
+                        </div>
+                        <button type="submit">
+                            <svg>
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-top__login">
+                    <button type="button" id="log-reg"><i>login</i> or <i>register</i></button>
+                    <form action="" method="post" class="login-register-form">
+                        <h4>Log in</h4>
+                        <fieldset>
+                            <input name="username" type="text" placeholder="Name">
+                            <input name="password" type="password" placeholder="password">
+                        </fieldset>
+                        <button type="submit">Log in</button>
+                        <em>or</em>
+                        <h4>Register account</h4>
+                        <a href="#">Register</a>
+                    </form>
+                </div>
             </div>
-            <div class="header-top__search">
-                <form action="" method="post" id="header-search">
-                    <div class="header-search-field">
-                        <input type="text" placeholder="search">
-                    </div>
-                    <button type="submit">
+            <div class="header-bottom">
+                <nav class="header-bottom__menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-bottom__action ">
+                <div class="header-cart">
+                    <button class="header-cart__button">
                         <svg>
-                            <use xlink:href="#icon-search"></use>
+                            <use xlink:href="#icon-cart"></use>
                         </svg>
                     </button>
-                </form>
-            </div>
-            <div class="header-top__login">
-                <button type="button" id="log-reg"></button>
-                <form action="" method="post" class="login-register-form">
-                    <h4>Log in</h4>
-                    <fieldset>
-                        <input name="username" type="text" placeholder="Name">
-                        <input name="password" type="password" placeholder="password">
-                    </fieldset>
-                    <button type="submit">Log in</button>
-                    <em>or</em>
-                    <h4>Register account</h4>
-                    <a href="#">Register</a>
-                </form>
+                    <span class="header-cart__counter">1</span>
+                </div>
             </div>
         </div>
-        <div class="header-bottom">
-            <nav class="header-bottom__menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-bottom__action ">
-            <div class="header-cart">
-                <button class="header-cart__button">
-                    <svg>
-                        <use xlink:href="#icon-cart"></use>
-                    </svg>
-                </button>
-                <span class="header-cart__counter">1</span>
-            </div>
-        </div>
-    </div>
-</header>
+    </header>
 <section class="home-banner">
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -98,30 +105,28 @@
     </div>
 </section>
 
-<section class="main-content">
+<section class="main-content content-wrapper">
     <section class="category-banners-box">
-        <div class="content-wrapper">
-            <ul class="category-banners">
-                <li class="category-banners__banner">
-                    <a href="#" class="banner-link">
-                        <img src="images/cat-banner-sale.jpg" alt=""/>
-                        <em class="banner-link__title">on sale</em>
-                    </a>
-                </li>
-                <li class="category-banners__banner">
-                    <a href="#" class="banner-link">
-                        <img src="images/cat-banner-offers.jpg" alt=""/>
-                        <em class="banner-link__title">special offers</em>
-                    </a>
-                </li>
-                <li class="category-banners__banner">
-                    <a href="#" class="banner-link">
-                        <img src="images/cat-banner-musthave.jpg" alt=""/>
-                        <em class="banner-link__title">must have</em>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="category-banners">
+            <li class="category-banners__banner">
+                <a href="#" class="banner-link">
+                    <img src="images/cat-banner-sale.jpg" alt=""/>
+                    <em class="banner-link__title">on sale</em>
+                </a>
+            </li>
+            <li class="category-banners__banner">
+                <a href="#" class="banner-link">
+                    <img src="images/cat-banner-offers.jpg" alt=""/>
+                    <em class="banner-link__title">special offers</em>
+                </a>
+            </li>
+            <li class="category-banners__banner">
+                <a href="#" class="banner-link">
+                    <img src="images/cat-banner-musthave.jpg" alt=""/>
+                    <em class="banner-link__title">must have</em>
+                </a>
+            </li>
+        </ul>
     </section>
     <div class="featured-products">
         <div class="featured-products__header">
@@ -288,27 +293,28 @@
         </div>
     </div>
     <div class="content-info-block">
-        <div class="content-info-block__section content-info-block__section--width25">
-            <h4>Free Shipping</h4>
-            <p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem</p>
+            <div class="content-info-block__section content-info-block__section--width25">
+                <h4>Free Shipping</h4>
+                <p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem</p>
+            </div>
+            <div class="content-info-block__section content-info-block__section--width25">
+                <h4>Testimonials</h4>
+                <p>vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos. Donec erat sem, vehicula id dictum sit.</p>
+                <i>John Doe</i>
+            </div>
+            <div class="content-info-block__section content-info-block__section--width50">
+                <h4>Our features</h4>
+                <ul class="features-list">
+                    <li class="features-list__item">Working fast</li>
+                    <li class="features-list__item">Quality goods</li>
+                    <li class="features-list__item">Fast delivery</li>
+                </ul>
+            </div>
         </div>
-        <div class="content-info-block__section content-info-block__section--width25">
-            <h4>Testimonials</h4>
-            <p>vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                himenaeos. Donec erat sem, vehicula id dictum sit.</p>
-            <i>John Doe</i>
-        </div>
-        <div class="content-info-block__section content-info-block__section--width50">
-            <h4>Our features</h4>
-            <ul class="features-list">
-                <li class="features-list__item">Working fast</li>
-                <li class="features-list__item">Quality goods</li>
-                <li class="features-list__item">Fast delivery</li>
-            </ul>
-        </div>
-    </div>
 </section>
+
 <footer class="footer">
     <section class="footer-top">
         <div class="footer-top__column">

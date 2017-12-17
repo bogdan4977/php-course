@@ -62,6 +62,7 @@ $textbody = preg_replace("/" . preg_quote($word) . "/","<b>" . $word . "</b>",$t
 
 <section class="content-block centered ">
     <a class="action-button" href="/">Reset</a>
+    <a class="action-button" href="form.php">form</a>
 </section>
 
 <section class="content-block centered">
