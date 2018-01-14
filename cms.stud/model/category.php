@@ -1,8 +1,8 @@
 <?php
 class Category extends Database{
 
-    public function testCategory() {
-        echo "category model";
+    public function calcFunc($x, $y) {
+        return $x * $y;
     }
 }
 
